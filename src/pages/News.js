@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import axios from "axios";
 import NewsCard from "../components/NewsCard";
