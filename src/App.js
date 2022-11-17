@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import "./App.css"
-import { BrowserRouter as Router, Routes, Route, json } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import News from "./pages/News";
 import Navbar from "./components/Navbar";
-import bg from "./assets/bg2.mp4";
 import Shop from "./pages/Shop";
 import Accounts from "./pages/Accounts";
 import AddNews from "./pages/AddNews";

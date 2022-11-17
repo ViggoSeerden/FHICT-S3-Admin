@@ -1,7 +1,3 @@
-import logo from "../assets/tartarussimlogo.png"
-import { Link } from "react-router-dom"
-import { useEffect } from "react";
-
 function HomePage() {
    
 

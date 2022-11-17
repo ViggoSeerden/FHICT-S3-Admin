@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom/client';
 import axios from "axios";
 import NewsCard from "../components/NewsCard";
 
-function EditNews(id) {
-    if (localStorage.getItem("NewsId")) {
-        localStorage.removeItem("NewsId");
-    }
-    localStorage.setItem("NewsId", id);
-    Navigate("/EditNews");
-}
+// function EditNews(id) {
+//     if (localStorage.getItem("NewsId")) {
+//         localStorage.removeItem("NewsId");
+//     }
+//     localStorage.setItem("NewsId", id);
+//     Navigate("/EditNews");
+// }
 
 var displaylist = [];
 

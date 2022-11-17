@@ -1,6 +1,3 @@
-import logo from "../assets/tartarussimlogo.png"
-import { Link } from "react-router-dom"
-
 function EditNews() {
     return (
         <div className="homepage">

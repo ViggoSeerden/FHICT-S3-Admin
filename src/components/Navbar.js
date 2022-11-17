@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import jwt_decode from "jwt-decode"
 import axios from "axios";
 
@@ -15,7 +15,7 @@ const Navbar = () => {
         var apiResponse = await axios.get('https://localhost:7019/api/User/CheckAdmin?token=' + decoded.sub)
         console.log(apiResponse);
 
-        if (apiResponse.data == true) {
+        if (apiResponse.data === true) {
             var loggeduser = await axios.get('https://localhost:7019/api/User/GetByToken?token=' + decoded.sub);
             console.log(loggeduser);
             localStorage.setItem('user', JSON.stringify(loggeduser))
@@ -41,12 +41,11 @@ const Navbar = () => {
             callback: handleCallbackResponse
         })
 
-        {
-            !localStorage.getItem('user') &&
-                google.accounts.id.renderButton(
-                    document.getElementById("signInDiv"),
-                    { theme: "outline", size: "medium" }
-                )
+        if (!localStorage.getItem('user')) {
+            google.accounts.id.renderButton(
+                document.getElementById("signInDiv"),
+                { theme: "outline", size: "medium" }
+            )
         }
 
     }, []);
