@@ -41,7 +41,7 @@ jobs:
       - name: Build image
         run: >
           sudo docker build . --file Dockerfile
-          --tag oggiv/fhict-s3-ttssim:latest
+          --tag oggiv/fhict-s3-ttssim:admin
       
       - name: Push to registry
-        run: sudo docker push oggiv/fhict-s3-ttssim:latest
+        run: sudo docker push oggiv/fhict-s3-ttssim:admin
